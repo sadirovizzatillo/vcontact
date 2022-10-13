@@ -1,0 +1,32 @@
+{
+  "contacts": [
+    {
+      "name": "izzatillos",
+      "email": "sadirovizzatillo3@gmail.com",
+      "phone": "+998973364647",
+      "tag": "family",
+      "id": 1
+    },
+    {
+      "name": "sadriddinn",
+      "email": "ganiyev1",
+      "phone": "+998973364644",
+      "tag": "familyp",
+      "id": 2
+    },
+    {
+      "name": "sasd",
+      "email": "asd",
+      "phone": "dasd",
+      "tag": "asda",
+      "id": 3
+    },
+    {
+      "name": "sadas",
+      "email": "asdsa@gmail.com",
+      "phone": "asdsa",
+      "tag": "dasdsad",
+      "id": 4
+    }
+  ]
+}
