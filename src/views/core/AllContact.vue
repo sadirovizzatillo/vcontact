@@ -56,7 +56,7 @@
 
 <script setup>
 // import router from "@/router"
-import apiServices from "../../services/apiServices"
+// import apiServices from "../../services/apiServices"
 // import { computed, onMounted, ref } from "../../../node_modules/vue"
 import { useStore } from "vuex"
 import { ref } from "@vue/reactivity"
@@ -75,9 +75,9 @@ const editTag = ref(null)
 const edit = ref(false)
 const search = ref(null)
 
-onMounted(() => {
-    store.dispatch("getAllContacts");
-})
+// onMounted(() => {
+//     store.dispatch("getAllContacts");
+// })
 
 const modaDialog = () => {
     dialog.value = !dialog.value
@@ -104,14 +104,7 @@ const  ChangeDialog = async () => {
     }
     if(deleteId.value){
         const id = deleteId.value
-        try{
-            const { data } = await apiServices.deleteContact(id);
-            if(data){
-                await store.dispatch("getAllContacts")
-            }
-        }catch(err){
-            console.log(err)
-        }
+        store.dispatch("deleteContact", id)
     }
     
 }
@@ -121,7 +114,6 @@ const handleEdit = (data) => {
     editable.value = true
     edit.value = true
     if(data){
-        console.log(data)
         const { name, phone, email, id, tag } = data
         editEmail.value = email;
         editName.value = name;
