@@ -1,7 +1,7 @@
 {
   "contacts": [
     {
-      "name": "izzatillo",
+      "name": "izzatillos",
       "email": "sadirovizzatillo3@gmail.com",
       "phone": "+998973364647",
       "tag": "family",
@@ -20,13 +20,6 @@
       "phone": "dasd",
       "tag": "asda",
       "id": 3
-    },
-    {
-      "name": "sadas",
-      "email": "asdsa@gmail.com",
-      "phone": "asdsa",
-      "tag": "dasdsad",
-      "id": 4
     }
   ]
 }

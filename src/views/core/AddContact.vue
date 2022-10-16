@@ -21,7 +21,7 @@
         
         <div class="add-contact__bottom">
             <el-button type="primary" @click="AddContact">Add Contact</el-button>
-            <el-button @click="(() => this.$router.go(-1))">Back</el-button>
+            <el-button @click="backRoute">Back</el-button>
         </div>
     </div>
 </template>
@@ -39,6 +39,10 @@ const email = ref(null)
 const phone = ref(null)
 const tag = ref(null)
 
+
+const backRoute = () => {
+    router.go(-1)
+}
 const AddContact = async () => {
     const result = await ValidateEmail(email.value);
     if(result === true){
