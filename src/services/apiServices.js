@@ -1,7 +1,7 @@
 import axios from  'axios'
 
 export const apiClient = axios.create({
-    baseURL:'http://localhost:3000',
+    baseURL:'https://vcontact.netlify.app/',
     withCredentials:false,
     headers:{
         Accept: 'application/json',
