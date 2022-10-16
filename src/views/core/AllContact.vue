@@ -2,7 +2,7 @@
 <template>
     <div class="contacts-header">
         <h3>Contacts</h3>
-        <el-button type="primary" @click="(() => this.$router.push({ name: 'AddContact'}))">Add Contact</el-button>
+        <el-button type="primary" @click="goAddContact">Add Contact</el-button>
     </div>
     
     <div class="search-wrapper">
@@ -61,6 +61,7 @@ import apiServices from "../../services/apiServices"
 import { useStore } from "vuex"
 import { ref } from "@vue/reactivity"
 import { computed, onMounted } from "@vue/runtime-core"
+import router from "../../router"
 const store = useStore()
 
 const dialog = ref(false)
@@ -86,7 +87,9 @@ const searchContact = (e) => {
     store.dispatch("searchContact", e)
 }
 
-
+const goAddContact = () => {
+    router.push({ name: "AddContact"})
+}
 const  ChangeDialog = async () => {
     dialog.value = !dialog.value
     if(edit.value === true){
