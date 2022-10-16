@@ -1,7 +1,7 @@
 import axios from  'axios'
 
 export const apiClient = axios.create({
-    baseURL:'127.0.0.1',
+    baseURL:'https://celebrated-kheer-f06651.netlify.app',
     withCredentials:false,
     headers:{
         Accept: 'application/json',
